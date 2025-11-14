@@ -1,0 +1,1566 @@
+/* ==================== */
+/* Root Variables */
+/* ==================== */
+:root {
+    --primary-color: #1a7f64;
+    --primary-dark: #145c4a;
+    --primary-light: #2ba079;
+    --secondary-color: #d4af37;
+    --accent-color: #c9a961;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-color: #e0e0e0;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+}
+
+/* ==================== */
+/* Global Styles */
+/* ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Arabic Font */
+.verse-arabic,
+.surah-arabic-name,
+.bismillah,
+.verse-arabic-quiz,
+.verse-arabic-small,
+.option-arabic,
+.option-surah-arabic,
+.surah-arabic-title {
+    font-family: 'Amiri', serif;
+    font-size: 1.5rem;
+    line-height: 2;
+    direction: rtl;
+    text-align: right;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==================== */
+/* Navbar */
+/* ==================== */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 1rem 0;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-icon {
+    font-size: 2rem;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ==================== */
+/* Hero Section */
+/* ==================== */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==================== */
+/* Buttons */
+/* ==================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-light);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #229954;
+    transform: translateY(-2px);
+}
+
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ==================== */
+/* Stats Section */
+/* ==================== */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* ==================== */
+/* Sections */
+/* ==================== */
+.section {
+    margin: 4rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+/* ==================== */
+/* Surah Grid/List */
+/* ==================== */
+.surah-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.surah-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.surah-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.surah-number {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.surah-info {
+    flex: 1;
+}
+
+.surah-name-latin {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--text-dark);
+}
+
+.surah-name-arabic {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+    color: var(--primary-color);
+}
+
+.surah-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Surah List */
+.surah-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.surah-list-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.surah-list-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.surah-number-badge {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.surah-details {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.surah-names h3 {
+    margin-bottom: 0.25rem;
+}
+
+.surah-name-translation {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.surah-meta-info {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ==================== */
+/* Quiz Types */
+/* ==================== */
+.quiz-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.quiz-type-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.quiz-type-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.quiz-type-card.featured {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+}
+
+.quiz-type-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.quiz-type-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.quiz-type-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.quiz-type-card.featured p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Quiz Types Section */
+.quiz-types-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.quiz-type-card-large {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.quiz-type-card-large:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.quiz-type-card-large.featured {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+}
+
+.quiz-type-icon-large {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-type-card-large h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.quiz-type-card-large p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.quiz-type-card-large.featured p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.badge-large {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* ==================== */
+/* Page Header */
+/* ==================== */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+/* Surah Header */
+.surah-header {
+    text-align: left;
+}
+
+.surah-header-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.surah-number-large {
+    background: rgba(255, 255, 255, 0.2);
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.surah-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.surah-arabic-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.surah-tafsir {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    margin-top: 1rem;
+}
+
+.surah-tafsir h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* ==================== */
+/* Bismillah */
+/* ==================== */
+.bismillah {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+/* ==================== */
+/* Verses */
+/* ==================== */
+.verses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.verse-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.verse-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.verse-number-badge {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.verse-content {
+    flex: 1;
+}
+
+.verse-arabic {
+    font-size: 2rem;
+    line-height: 2.5;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.verse-latin {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.verse-translation {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.verse-tafsir details {
+    margin-top: 1rem;
+}
+
+.verse-tafsir summary {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.5rem;
+    background: var(--bg-light);
+    border-radius: var(--radius-sm);
+}
+
+.verse-tafsir p {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: var(--radius-sm);
+}
+
+.verse-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 1rem;
+}
+
+/* ==================== */
+/* Navigation */
+/* ==================== */
+.surah-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+}
+
+/* ==================== */
+/* Search */
+/* ==================== */
+.search-box {
+    margin: 2rem 0;
+}
+
+.search-box form {
+    display: flex;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* ==================== */
+/* Quiz Container */
+/* ==================== */
+.quiz-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.quiz-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.quiz-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.quiz-theme {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.quiz-progress {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Question Card */
+.question-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.question-header {
+    margin-bottom: 1.5rem;
+}
+
+.question-number {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+}
+
+.question-text {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.question-verse {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.verse-arabic-quiz {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.verse-translation-quiz {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Options */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.option-card {
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+
+.option-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.option-content {
+    padding: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.option-card:hover .option-content {
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.option-card input[type="radio"]:checked ~ .option-content {
+    border-color: var(--primary-color);
+    background-color: rgba(26, 127, 100, 0.05);
+}
+
+.option-card input[type="radio"]:checked ~ .option-check {
+    display: block;
+}
+
+.option-check {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--success-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.option-arabic {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.option-translation,
+.option-surah-name {
+    color: var(--text-dark);
+}
+
+/* Question Navigation */
+.question-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Timer */
+.quiz-timer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.timer-icon {
+    font-size: 1.5rem;
+}
+
+/* ==================== */
+/* Result Container */
+/* ==================== */
+.result-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.result-header {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+}
+
+.result-emoji {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.result-message {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-message.excellent {
+    color: var(--success-color);
+}
+
+.result-message.very-good {
+    color: var(--primary-color);
+}
+
+.result-message.good {
+    color: var(--warning-color);
+}
+
+.result-message.needs-improvement {
+    color: var(--danger-color);
+}
+
+.result-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-box {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Detailed Results */
+.detailed-results {
+    margin-bottom: 3rem;
+}
+
+.detailed-results h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.answer-review {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--text-light);
+}
+
+.answer-review.correct {
+    border-left-color: var(--success-color);
+}
+
+.answer-review.incorrect {
+    border-left-color: var(--danger-color);
+}
+
+.answer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.question-num {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.answer-status {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+}
+
+.answer-review.correct .answer-status {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.answer-review.incorrect .answer-status {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.verse-arabic-small {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.answer-options {
+    margin-top: 1rem;
+}
+
+.option-review {
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.option-review.correct-option {
+    background-color: rgba(39, 174, 96, 0.1);
+    border-color: var(--success-color);
+}
+
+.option-review.wrong-option {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-color: var(--danger-color);
+}
+
+.badge-correct,
+.badge-wrong {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+.badge-correct {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.badge-wrong {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+/* Result Actions */
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ==================== */
+/* Leaderboard */
+/* ==================== */
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-tab {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    background: white;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.filter-tab:hover {
+    border-color: var(--primary-color);
+}
+
+.filter-tab.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.leaderboard-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.leaderboard-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.leaderboard-card.rank-1,
+.leaderboard-card.rank-2,
+.leaderboard-card.rank-3 {
+    border-left: 4px solid;
+}
+
+.leaderboard-card.rank-1 {
+    border-left-color: #FFD700;
+}
+
+.leaderboard-card.rank-2 {
+    border-left-color: #C0C0C0;
+}
+
+.leaderboard-card.rank-3 {
+    border-left-color: #CD7F32;
+}
+
+.rank-display {
+    width: 60px;
+    text-align: center;
+}
+
+.medal {
+    font-size: 2.5rem;
+}
+
+.rank-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.player-details {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.player-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.player-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.player-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.player-stats {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.score-display {
+    text-align: center;
+}
+
+.score-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.score-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.quiz-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.quiz-type-badge {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.quiz-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.leaderboard-preview {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.leaderboard-item:last-child {
+    border-bottom: none;
+}
+
+.rank {
+    width: 40px;
+    text-align: center;
+}
+
+.player-info {
+    flex: 1;
+}
+
+.score {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Leaderboard CTA */
+.leaderboard-cta {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.leaderboard-cta h2 {
+    margin-bottom: 1rem;
+}
+
+.leaderboard-cta p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+/* ==================== */
+/* Benefits & Instructions */
+/* ==================== */
+.quiz-instructions,
+.benefits-section {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+}
+
+.quiz-instructions h3,
+.benefits-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.quiz-instructions ol {
+    padding-left: 2rem;
+}
+
+.quiz-instructions li {
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.benefit-card {
+    text-align: center;
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.benefit-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-top: 3rem;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* ==================== */
+/* Footer */
+/* ==================== */
+.footer {
+    background: var(--text-dark);
+    color: white;
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--secondary-color);
+}
+
+/* ==================== */
+/* Utilities */
+/* ==================== */
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: var(--radius-md);
+}
+
+.empty-state p {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* ==================== */
+/* Responsive Design */
+/* ==================== */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .surah-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .surah-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .verse-card {
+        flex-direction: column;
+    }
+
+    .verse-arabic {
+        font-size: 1.5rem;
+    }
+
+    .question-navigation {
+        flex-direction: column;
+    }
+
+    .result-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .leaderboard-card {
+        flex-wrap: wrap;
+    }
+
+    .quiz-timer {
+        bottom: 10px;
+        right: 10px;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-brand .nav-title {
+        font-size: 1.2rem;
+    }
+
+    .nav-icon {
+        font-size: 1.5rem;
+    }
+}
