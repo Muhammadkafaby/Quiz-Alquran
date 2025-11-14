@@ -34,10 +34,26 @@ Aplikasi web Islami berbasis CodeIgniter 4 untuk membaca Al-Qur'an digital dan b
    - Mendorong konsistensi belajar harian
 
 ### 🏆 Fitur Tambahan
-- **Leaderboard** - Kompetisi skor dengan pengguna lain
-- **Statistik Quiz** - Tracking progress dan performa
-- **Responsive Design** - Tampilan optimal di semua perangkat
-- **Desain Islami** - Antarmuka yang indah dan nyaman
+
+**Sistem Pengguna:**
+- ✅ **Autentikasi** - Login, Register, Profile Management
+- ✅ **Bookmark Ayat** - Simpan ayat favorit dengan catatan pribadi
+- ✅ **Dark Mode** - Theme gelap untuk kenyamanan mata
+- ✅ **Notifikasi** - Pengingat quiz harian dan achievement
+
+**Fitur Interaktif:**
+- ✅ **Audio Recitation** - Dengarkan murottal dari 9+ qari terkenal
+- ✅ **Multiplayer Quiz** - Berkompetisi real-time dengan teman
+- ✅ **Achievement System** - 16+ badges & pencapaian
+- ✅ **Social Sharing** - Bagikan hasil ke WhatsApp, Twitter, Facebook, Telegram
+- ✅ **Export PDF** - Download hasil quiz dalam format PDF
+- ✅ **Leaderboard** - Ranking global dan per kategori
+
+**Pengalaman Pengguna:**
+- ✅ **Responsive Design** - Optimal di semua perangkat
+- ✅ **Desain Islami** - Antarmuka indah dengan nuansa Islami
+- ✅ **Progressive Features** - Offline capability (future)
+- ✅ **Real-time Updates** - Live notification & multiplayer
 
 ## 🛠️ Teknologi
 

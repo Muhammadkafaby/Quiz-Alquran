@@ -50,3 +50,54 @@ $routes->group('admin', function($routes) {
     $routes->get('import/quran', 'AdminController::importQuran');
     $routes->get('import/status', 'AdminController::importStatus');
 });
+
+// Auth routes
+$routes->group('auth', function($routes) {
+    $routes->get('login', 'AuthController::login');
+    $routes->post('login', 'AuthController::attemptLogin');
+    $routes->get('register', 'AuthController::register');
+    $routes->post('register', 'AuthController::attemptRegister');
+    $routes->get('logout', 'AuthController::logout');
+    $routes->get('profile', 'AuthController::profile');
+    $routes->post('profile/update', 'AuthController::updateProfile');
+});
+
+// Bookmark routes
+$routes->group('bookmark', function($routes) {
+    $routes->get('/', 'BookmarkController::index');
+    $routes->post('toggle', 'BookmarkController::toggle');
+    $routes->post('update-note/(:num)', 'BookmarkController::updateNote/$1');
+    $routes->get('delete/(:num)', 'BookmarkController::delete/$1');
+});
+
+// Multiplayer routes
+$routes->group('multiplayer', function($routes) {
+    $routes->get('/', 'MultiplayerController::index');
+    $routes->post('create-room', 'MultiplayerController::createRoom');
+    $routes->post('join-room', 'MultiplayerController::joinRoom');
+    $routes->get('room/(:alphanum)', 'MultiplayerController::room/$1');
+    $routes->post('start-game', 'MultiplayerController::startGame');
+    $routes->post('submit-answers', 'MultiplayerController::submitAnswers');
+    $routes->get('room-status/(:num)', 'MultiplayerController::getRoomStatus/$1');
+    $routes->get('leave/(:num)', 'MultiplayerController::leaveRoom/$1');
+});
+
+// PDF Export routes
+$routes->group('pdf', function($routes) {
+    $routes->get('result/(:num)', 'PDFController::exportResult/$1');
+    $routes->get('statistics', 'PDFController::exportStatistics');
+});
+
+// Notification routes
+$routes->group('notifications', function($routes) {
+    $routes->get('/', 'NotificationController::index');
+    $routes->post('mark-read/(:num)', 'NotificationController::markAsRead/$1');
+    $routes->post('mark-all-read', 'NotificationController::markAllAsRead');
+    $routes->get('unread-count', 'NotificationController::getUnreadCount');
+});
+
+// Achievement routes
+$routes->group('achievements', function($routes) {
+    $routes->get('/', 'AchievementController::index');
+    $routes->get('user/(:num)', 'AchievementController::userAchievements/$1');
+});
