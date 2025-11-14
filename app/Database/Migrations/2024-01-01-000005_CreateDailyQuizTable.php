@@ -47,7 +47,6 @@ class CreateDailyQuizTable extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addUniqueKey('quiz_date');
         $this->forge->createTable('daily_quiz');
     }
 

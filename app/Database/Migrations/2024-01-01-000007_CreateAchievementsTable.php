@@ -58,7 +58,6 @@ class CreateAchievementsTable extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addUniqueKey('code');
         $this->forge->createTable('achievements');
 
         // User achievements (unlocked)

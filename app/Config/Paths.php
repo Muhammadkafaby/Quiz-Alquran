@@ -4,9 +4,28 @@ namespace Config;
 
 class Paths
 {
-    public $systemDirectory = __DIR__ . '/../../vendor/codeigniter4/framework/system';
-    public $appDirectory = __DIR__ . '/..';
-    public $writableDirectory = __DIR__ . '/../../writable';
-    public $testsDirectory = __DIR__ . '/../../tests';
-    public $viewDirectory = __DIR__ . '/../Views';
+    /**
+     * System Directory
+     */
+    public string $systemDirectory = __DIR__ . '/../../vendor/codeigniter4/framework/system';
+
+    /**
+     * Application Directory
+     */
+    public string $appDirectory = __DIR__ . '/..';
+
+    /**
+     * Writable Directory
+     */
+    public string $writableDirectory = __DIR__ . '/../../writable';
+
+    /**
+     * Tests Directory
+     */
+    public string $testsDirectory = __DIR__ . '/../../tests';
+
+    /**
+     * View Directory
+     */
+    public string $viewDirectory = __DIR__ . '/../Views';
 }

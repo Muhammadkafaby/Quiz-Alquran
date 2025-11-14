@@ -66,7 +66,6 @@ class CreateMultiplayerTables extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addUniqueKey('room_code');
         $this->forge->addKey('host_user_id');
         $this->forge->addForeignKey('host_user_id', 'users', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('multiplayer_rooms');
