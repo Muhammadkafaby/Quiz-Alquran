@@ -6,6 +6,7 @@
     <title><?= esc($title ?? 'Quiz Al-Qur\'an') ?></title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/dark-mode.css">
+    <link rel="stylesheet" href="/css/toast.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -251,3 +252,38 @@ document.addEventListener('click', function(event) {
     }
 });
 </script>
+
+<!-- Toast Notification System -->
+<script src="/js/toast.js"></script>
+
+<?php if (session()->getFlashdata('success')): ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        toast.success('<?= esc(session()->getFlashdata('success')) ?>');
+    });
+</script>
+<?php endif; ?>
+
+<?php if (session()->getFlashdata('error')): ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        toast.error('<?= esc(session()->getFlashdata('error')) ?>');
+    });
+</script>
+<?php endif; ?>
+
+<?php if (session()->getFlashdata('warning')): ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        toast.warning('<?= esc(session()->getFlashdata('warning')) ?>');
+    });
+</script>
+<?php endif; ?>
+
+<?php if (session()->getFlashdata('info')): ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        toast.info('<?= esc(session()->getFlashdata('info')) ?>');
+    });
+</script>
+<?php endif; ?>
