@@ -47,6 +47,22 @@ $routes->group('api', function($routes) {
 
 // Admin routes for importing data
 $routes->group('admin', function($routes) {
+    // Dashboard
+    $routes->get('/', 'AdminDashboard::index');
+    $routes->get('dashboard', 'AdminDashboard::index');
+
+    // Management pages
+    $routes->get('users', 'AdminDashboard::users');
+    $routes->get('quizzes', 'AdminDashboard::quizzes');
+    $routes->get('content', 'AdminDashboard::content');
+    $routes->get('achievements', 'AdminDashboard::achievements');
+    $routes->get('analytics', 'AdminDashboard::analytics');
+
+    // Actions
+    $routes->post('delete-user/(:num)', 'AdminDashboard::deleteUser/$1');
+    $routes->get('export', 'AdminDashboard::export');
+
+    // Data import (old routes)
     $routes->get('import/quran', 'AdminController::importQuran');
     $routes->get('import/status', 'AdminController::importStatus');
 });
